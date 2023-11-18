@@ -1,0 +1,32 @@
+CSS float elementləri müəyyən bir ardıcıllıqla, xüsusən də veb səhifələrdə yerləşdirmək üçün istifadə edilən xüsusiyyətdir. Float elementi digər məzmunun yanında bükmək və ya yerləşdirmək üçün istifadə olunur. Bununla belə, float istifadə edərkən, xüsusən də float istifadə edən elementlərin hündürlükləri fərqli olduqda və ya məzmunun sonunda float istifadə edərək elementləri təmizləmək lazım olduqda bəzi problemlər yarana bilər. Buna görə də, floatlardan istifadə edərkən, "clearfix" adlı bir texnika istifadə olunur.
+
+Float-ın əsaslarını başa düşdükdən sonra clearfix texnikasını başa düşmək üçün aşağıdakı addımları yerinə yetirə bilərsiniz:
+
+Clearfix Tətbiqi:
+Clearfix float xüsusiyyətlərindən qaynaqlanan layout problemlərini həll etmək üçün istifadə olunur. Bu, tətbiq olunan float xassəsinə malik elementlərin əsas elementin hündürlüyünü tanımasını təmin edir. Təmizləmə üçün ən çox istifadə edilən üsul ana elementin içərisinə boş element əlavə etməkdir.
+
+
+Ana Elementə Clearfix tətbiqi:
+İndi ana elementinizə aydınlaşdırma qaydalarını tətbiq edin. Bu, float-redaktə edilmiş məzmunun əsas elementin hündürlüyünü düzgün hesablamasını təmin edir.
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+Bu, float-tənzimlənmiş elementlərin ana elementin hündürlüyünü tanımasını təmin edir və səhifə tərtibatında hamar bir nəticəni təmin edir.
+
+Bu, əsas float təmizləmə üsuludur və float xüsusiyyətlərindən istifadə edərək redaktə edilən səhifələr üçün çox yayılmış bir yanaşmadır. Bununla belə, müasir CSS redaktə üsulları və xüsusiyyətləri ilə üzmək üçün alternativlər var. Flexbox və CSS Grid kimi texnologiyalar səhifə tərtibatlarının yaradılmasını asan və dəqiq edir.
+
+
+
+
+Clearfix və overflow müxtəlif problemləri həll etmək üçün istifadə edilən iki fərqli CSS xüsusiyyətidir və onlar əsaslı şəkildə fərqli məqsədlərə xidmət edir.
+
+Clearfix:
+Clearfix float xüsusiyyəti ilə təşkil edilmiş elementlərin ana elementinin hündürlüyünün hesablanması problemini həll etmək üçün istifadə olunur. Float xüsusiyyətindən istifadə edildikdə, elementlər ana elementin hündürlüyünü tanımır və buna görə də əsas element çox vaxt gözlənilməz nəticələrlə nəticələnə bilər. Clearfix əsas elementə gizli element əlavə etməklə (adətən ::after seçicisi ilə yaradılır) float xüsusiyyətlərindən yaranan layout problemlərini həll edir. Bu, float ilə düzülmüş elementlərin əsas elementin hündürlüyünü düzgün hesablamasını təmin edir.
+
+Daşqın:
+Daşma elementin məzmunu elementin hüdudlarını keçərsə, necə idarə olunacağını müəyyən edən xüsusiyyətdir. Bu xüsusiyyət kaydırma çubuğunu göstərmək, məzmunu gizlətmək və ya elementin məzmun ölçüləri uyğun gəlmədikdə məzmunu göstərmək kimi davranışa nəzarət etmək üçün istifadə olunur. Bu xüsusiyyət xüsusilə daşqın ilə bağlı problemlər olduqda istifadə olunur.
+
+Beləliklə, əsasən Clearfix float ilə təşkil edilmiş elementlərin hündürlüyü problemini həll etmək üçün istifadə olunur, daşqın isə məzmun ölçüləri uyğun gəlmədikdə nə edəcəyini idarə etmək üçün istifadə olunur. İkisi arasında fərqli məqsədlər və istifadə halları var.

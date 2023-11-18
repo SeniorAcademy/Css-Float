@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .float-left {
+  float: left;
+  width: 50%;
+}
+
+.float-right {
+  float: right;
+  width: 50%;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="float-left">Left</div>
+  <div class="float-right">Right</div>
+  <div class="clearfix"></div>
+</body>
+</html>
